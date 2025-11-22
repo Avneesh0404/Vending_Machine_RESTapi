@@ -50,3 +50,10 @@ GET	/products/	Fetch all available products.
 POST	/products/addproduct	Add a new product (name, price, quantity).
 PUT	/products/updateproduct/:id	Update a product by ID.
 DELETE	/products/deleteproduct/:id	Delete a product by ID.
+## Cart Routes
+
+| Method   | Endpoint              | Description                               |
+| -------- | --------------------- | ----------------------------------------- |
+| **GET**  | `/cart/`              | View all cart items                       |
+| **POST** | `/cart/addtocart/:id` | Add a product (by product ID) to the cart |
+
