@@ -4,9 +4,10 @@ import {Cart} from '../model/cart.js'
 import { product } from '../model/product.js';
 cartroute.get('/',async(req,res)=>{
     try {
-        const cart_items =await cart.find();
+        const cart_items =await Cart.find();
         res.status(200).json(cart_items);
     } catch (error) {
+      console.log(error);
         res.status(500).json({msg:"error getting cart items"})
     }
 })
