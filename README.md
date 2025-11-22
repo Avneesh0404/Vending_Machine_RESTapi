@@ -44,6 +44,7 @@ You should see:
 🚀 Server running on PORT 8000
 
 ## 🧩 API Routes Overview
+## Inventory Routes
 | Method     | Endpoint                      | Description                               |
 | ---------- | ----------------------------- | ----------------------------------------- |
 | **GET**    | `/products/`                  | Fetch all available products              |
