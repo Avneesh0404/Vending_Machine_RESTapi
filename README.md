@@ -18,7 +18,7 @@ It supports product management and cart operations, allowing users to add, updat
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/<your-username>/Vending_Machine_RESTapi.git
+git clone https://github.com/Avneesh0404/Vending_Machine_RESTapi.git
 cd Vending_Machine_RESTapi
 ```
 
@@ -44,9 +44,9 @@ You should see:
 🚀 Server running on PORT 8000
 
 ## 🧩 API Routes Overview
-🛒 Product Routes (/products)
-Method	Endpoint	Description
-GET	/products/	Fetch all available products
-POST	/products/addproduct	Add a new product (name, price, quantity)
-PUT	/products/updateproduct/:id	Update a product by ID
-DELETE	/products/deleteproduct/:id	Delete a product by ID
+🛒 Product Routes (/products).
+Method	Endpoint	Description.
+GET	/products/	Fetch all available products.
+POST	/products/addproduct	Add a new product (name, price, quantity).
+PUT	/products/updateproduct/:id	Update a product by ID.
+DELETE	/products/deleteproduct/:id	Delete a product by ID.
