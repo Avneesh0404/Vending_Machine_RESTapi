@@ -1,7 +1,7 @@
 # 🧃 Vending Machine REST API
 
-A RESTful backend built using **Node.js**, **Express**, and **MongoDB (Mongoose)** that simulates a simple vending machine system.  
-It supports product management and cart operations, allowing users to add, update, delete, and fetch products, as well as manage a shopping cart.
+A simple and ready-to-use **REST API** built with **Node.js**, **Express**, and **MongoDB**.  
+This project is designed for **frontend developers and learners** who want to practice building UIs and working with APIs — without needing to write backend logic themselves.
 
 ---
 
@@ -11,6 +11,8 @@ It supports product management and cart operations, allowing users to add, updat
 - **Express.js** — Web framework for building REST APIs  
 - **MongoDB + Mongoose** — Database and ODM for structured data modeling  
 - **dotenv** — Environment variable management
+- 🛒 Full CRUD operations for **Products** and **Cart**
+- 🧠 Great for frontend testing using `fetch()` or `axios`
 
 ---
 
