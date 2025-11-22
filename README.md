@@ -59,3 +59,54 @@ You should see:
 | **GET**  | `/cart/`              | View all cart items                       |
 | **POST** | `/cart/addtocart/:id` | Add a product (by product ID) to the cart |
 
+## 🧠 Example: Add a product
+```
+Request
+
+POST /products/addproduct
+Content-Type: application/json
+
+{
+  "name": "Coke",
+  "price": 40,
+  "quantity": 10
+}
+
+
+Response
+
+{
+  "message": "Product added successfully",
+  "product": {
+    "_id": "67601cdd6a42c0c367beeb7f",
+    "name": "Coke",
+    "price": 40,
+    "quantity": 10
+  }
+}
+```
+## 🧠 Example: Add to Cart
+```
+Request
+
+POST /cart/addtocart/67601cdd6a42c0c367beeb7f
+Content-Type: application/json
+
+{
+  "quantity": 2
+}
+
+
+Response
+
+{
+  "msg": "Item added successfully",
+  "cart": {
+    "_id": "67601f0a6a42c0c367beeb85",
+    "items": [
+      { "product": "67601cdd6a42c0c367beeb7f", "quantity": 2 }
+    ],
+    "total_value": 80
+  }
+}
+```
