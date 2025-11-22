@@ -31,7 +31,7 @@ npm install
 Create a .env file in the project root:
 
 PORT=8000
-MONGO_URI=mongodb://127.0.0.1:27017/vending_machine
+MONGO_URI=<Your-MongoDB-URI-Link>
 ```
 ### 4️⃣ Start the server
 ```bash
