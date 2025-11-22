@@ -58,6 +58,7 @@ You should see:
 | -------- | --------------------- | ----------------------------------------- |
 | **GET**  | `/cart/`              | View all cart items                       |
 | **POST** | `/cart/addtocart/:id` | Add a product (by product ID) to the cart |
+| **DELETE** | `/cart/delete`      | To clear the cart                         |
 
 ## 🧠 Example: Add a product
 ```

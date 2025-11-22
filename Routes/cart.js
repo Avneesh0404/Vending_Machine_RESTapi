@@ -47,5 +47,15 @@ cartroute.post("/addtocart/:id", async (req, res) => {
     res.status(500).json({ error: "Adding item to cart failed" });
   }
 });
+cartroute.delete("/delete",async (req,res)=>{
+  try{
+    await Cart.deleteMany({});
+    res.status(200).json({msg:"Cart items deleted completely"})
+  }
+  catch(error){
+    res.status(500).json({error:"Failed to delete Cart items"})
+  }
+
+})
 
 export default cartroute
