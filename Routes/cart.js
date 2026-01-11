@@ -2,6 +2,8 @@ import express from'express';
 const cartroute = express.Router(); 
 import {Cart} from '../model/cart.js'
 import { product } from '../model/product.js';
+
+
 cartroute.get('/',async(req,res)=>{
     try {
         const cart_items =await Cart.find();
@@ -11,6 +13,8 @@ cartroute.get('/',async(req,res)=>{
         res.status(500).json({msg:"error getting cart items"})
     }
 })
+
+
 cartroute.post("/addtocart/:id", async (req, res) => {
   try {
     const { id } = req.params;               
@@ -32,13 +36,9 @@ cartroute.post("/addtocart/:id", async (req, res) => {
       c.items.push({ product: id, quantity });
     }
 
-    let total = 0;
-    for (const item of c.items) {
-      const prod = await product.findById(item.product);
-      if (prod) total += prod.price * item.quantity;
-    }
-
-    c.total_cart_value = total;
+    c.total_cart_value+=pr.price*quantity;
+    pr.quantity-=quantity
+    await pr.save();
     await c.save();
 
     res.status(200).json({ msg: "Item added successfully", cart: c });
@@ -47,6 +47,8 @@ cartroute.post("/addtocart/:id", async (req, res) => {
     res.status(500).json({ error: "Adding item to cart failed" });
   }
 });
+
+
 cartroute.delete("/delete",async (req,res)=>{
   try{
     await Cart.deleteMany({});
